@@ -1,0 +1,24 @@
+CREATE TABLE habit (
+    id INTEGER NOT NULL PRIMARY KEY,
+    group_id INTEGER NOT NULL,
+    name TEXT NOT NULL,
+    type TEXT NOT NULL,
+    freq_per_week INTEGER NOT NULL,
+    owner_id INTEGER NOT NULL
+);
+
+CREATE TABLE completion (
+    id INTEGER NOT NULL PRIMARY KEY,
+    habit_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    completed_at TEXT NOT NULL,
+    meta TEXT
+);
+
+CREATE TABLE pending_outbox (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    endpoint TEXT NOT NULL,
+    body TEXT NOT NULL,
+    method TEXT NOT NULL,
+    created_at TEXT NOT NULL
+);
