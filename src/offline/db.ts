@@ -29,7 +29,7 @@ export function startOutboxPump() {
 }
 
 async function flushOutbox() {
-  const rows = db.getAllSync('SELECT id, habitId, payload FROM completion_outbox ORDER BY created_at ASC');
+  const rows = db.getAllSync('SELECT id, habitId, payload FROM completion_outbox ORDER BY created_at ASC') as Array<{ id: number; habitId: number; payload: string }>;
   
   for (const row of rows) {
     try {
