@@ -51,7 +51,7 @@ src/
 
    - `BASE_URL`: Your Django backend URL
    - `ONESIGNAL_APP_ID`: OneSignal app ID
-   - `RC_API_KEY`: RevenueCat public key
+   - `REVENUECAT_API_KEY`: RevenueCat public key
 
 3. Start the development server:
 

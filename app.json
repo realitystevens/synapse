@@ -1,4 +1,9 @@
 {
   "name": "SynapsePlus",
-  "displayName": "SynapsePlus"
+  "displayName": "SynapsePlus",
+  "expo": {
+    "plugins": [
+      "onesignal-expo-plugin"
+    ]
+  }
 }

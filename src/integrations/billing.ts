@@ -2,7 +2,7 @@ import Purchases from 'react-native-purchases';
 import { Env } from '../core/env';
 
 export async function initBilling(userId?: string) {
-  Purchases.configure({ apiKey: Env.RC_API_KEY, appUserID: userId });
+  Purchases.configure({ apiKey: Env.REVENUECAT_API_KEY, appUserID: userId });
 }
 
 export async function purchase(productId: string) {
